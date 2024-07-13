@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script>
+      function init() {
+        const array = [
+          "/01_Circle/JSON/01_black.json",
+          "/01_Circle/JSON/01_white.json",
+          "/01_Circle/JSON/02_black.json",
+          "/01_Circle/JSON/02_white.json",
+          "/01_Circle/JSON/03_black.json",
+          "/01_Circle/JSON/03_white.json",
+          "/01_Circle/JSON/04_black.json",
+          "/01_Circle/JSON/04_white.json",
+          "/01_Circle/JSON/05_black.json",
+          "/01_Circle/JSON/05_white.json",
+          "/01_Circle/JSON/06_black.json",
+          "/01_Circle/JSON/06_white.json",
+          "/01_Circle/JSON/07_black.json",
+          "/01_Circle/JSON/07_white.json",
+          "/01_Circle/JSON/08_black.json",
+          "/01_Circle/JSON/08_white.json",
+          "/02_Dots/JSON/01_black.json",
+          "/02_Dots/JSON/01_white.json",
+          "/02_Dots/JSON/02_black.json",
+          "/02_Dots/JSON/02_white.json",
+          "/02_Dots/JSON/03_black.json",
+          "/02_Dots/JSON/03_white.json",
+          "/02_Dots/JSON/04_black.json",
+          "/02_Dots/JSON/04_white.json",
+          "/02_Dots/JSON/05_black.json",
+          "/02_Dots/JSON/05_white.json",
+          "/02_Dots/JSON/06_black.json",
+          "/02_Dots/JSON/06_white.json",
+          "/02_Dots/JSON/07_black.json",
+          "/02_Dots/JSON/07_white.json",
+          "/02_Dots/JSON/08_black.json",
+          "/02_Dots/JSON/08_white.json",
+          "/03_Fade Circles/JSON/01_black.json",
+          "/03_Fade Circles/JSON/01_white.json",
+          "/03_Fade Circles/JSON/02_black.json",
+          "/03_Fade Circles/JSON/02_white.json",
+          "/03_Fade Circles/JSON/03_black.json",
+          "/03_Fade Circles/JSON/03_white.json",
+          "/03_Fade Circles/JSON/04_black.json",
+          "/03_Fade Circles/JSON/04_white.json",
+          "/03_Fade Circles/JSON/05_black.json",
+          "/03_Fade Circles/JSON/05_white.json",
+          "/03_Fade Circles/JSON/06_black.json",
+          "/03_Fade Circles/JSON/06_white.json",
+          "/03_Fade Circles/JSON/07_black.json",
+          "/03_Fade Circles/JSON/07_white.json",
+          "/03_Fade Circles/JSON/08_black.json",
+          "/03_Fade Circles/JSON/08_white.json",
+          "/04_Ball/JSON/01_black.json",
+          "/04_Ball/JSON/01_white.json",
+          "/04_Ball/JSON/02_black.json",
+          "/04_Ball/JSON/02_white.json",
+          "/04_Ball/JSON/03_black.json",
+          "/04_Ball/JSON/03_white.json",
+          "/04_Ball/JSON/04_black.json",
+          "/04_Ball/JSON/04_white.json",
+          "/04_Ball/JSON/05_black.json",
+          "/04_Ball/JSON/05_white.json",
+          "/04_Ball/JSON/06_black.json",
+          "/04_Ball/JSON/06_white.json",
+          "/04_Ball/JSON/07_black.json",
+          "/04_Ball/JSON/07_white.json",
+          "/04_Ball/JSON/08_black.json",
+          "/04_Ball/JSON/08_white.json",
+          "/05_Time/JSON/01_black.json",
+          "/05_Time/JSON/01_white.json",
+          "/05_Time/JSON/02_black.json",
+          "/05_Time/JSON/02_white.json",
+          "/05_Time/JSON/03_black.json",
+          "/05_Time/JSON/03_white.json",
+          "/05_Time/JSON/04_black.json",
+          "/05_Time/JSON/04_white.json",
+          "/05_Time/JSON/05_black.json",
+          "/05_Time/JSON/05_white.json",
+          "/05_Time/JSON/06_black.json",
+          "/05_Time/JSON/06_white.json",
+          "/05_Time/JSON/07_black.json",
+          "/05_Time/JSON/07_white.json",
+          "/05_Time/JSON/08_black.json",
+          "/05_Time/JSON/08_white.json",
+          "/06_Wifi/JSON/01_black.json",
+          "/06_Wifi/JSON/01_white.json",
+          "/06_Wifi/JSON/02_black.json",
+          "/06_Wifi/JSON/02_white.json",
+          "/06_Wifi/JSON/03_black.json",
+          "/06_Wifi/JSON/03_white.json",
+          "/06_Wifi/JSON/04_black.json",
+          "/06_Wifi/JSON/04_white.json",
+          "/06_Wifi/JSON/05_black.json",
+          "/06_Wifi/JSON/05_white.json",
+          "/06_Wifi/JSON/06_black.json",
+          "/06_Wifi/JSON/06_white.json",
+          "/06_Wifi/JSON/07_black.json",
+          "/06_Wifi/JSON/07_white.json",
+          "/06_Wifi/JSON/08_black.json",
+          "/06_Wifi/JSON/08_white.json",
+          "/07_Icons/JSON/01_black.json",
+          "/07_Icons/JSON/01_white.json",
+          "/07_Icons/JSON/02_black.json",
+          "/07_Icons/JSON/02_white.json",
+          "/07_Icons/JSON/03_black.json",
+          "/07_Icons/JSON/03_white.json",
+          "/07_Icons/JSON/04_black.json",
+          "/07_Icons/JSON/04_white.json",
+          "/07_Icons/JSON/05_black.json",
+          "/07_Icons/JSON/05_white.json",
+          "/07_Icons/JSON/06_black.json",
+          "/07_Icons/JSON/06_white.json",
+          "/07_Icons/JSON/07_black.json",
+          "/07_Icons/JSON/07_white.json",
+          "/07_Icons/JSON/08_black.json",
+          "/07_Icons/JSON/08_white.json",
+        ];
+        array.forEach((item) => {
+          document.querySelector("body").innerHTML =
+            (document.querySelector("body").innerHTML || "") +
+            `
+    <div style="width: 20%">
+      <dotlottie-player
+        src="_MAIN/Assets${item}"
+        background="transparent"
+        speed="1"
+        style="width: 150px; height: 150px"
+        direction="1"
+        playMode="normal"
+        controls
+      ></dotlottie-player>
+    </div>
+          `;
+        });
+      }
+    </script>
+  </head>
+  <body
+    style="display: flex; flex-wrap: wrap; width: 98%; justify-content: center"
+    onload="init()"
+  ></body>
+</html>
